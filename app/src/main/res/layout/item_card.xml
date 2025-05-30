@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="180dp"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <!-- Card Number Container -->
+        <FrameLayout
+            android:id="@+id/card_number_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/card_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="**** **** **** 1234"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/card_number_masked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="**** **** **** ****"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- Balance Container -->
+        <FrameLayout
+            android:id="@+id/card_balance_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_number_container">
+
+            <TextView
+                android:id="@+id/card_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$1,234.56"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/card_balance_masked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$******"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- Card Holder Container -->
+        <FrameLayout
+            android:id="@+id/card_holder_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/card_expiry_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/card_type_icon">
+
+            <TextView
+                android:id="@+id/card_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/card_holder_masked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="**** ****"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- Expiry Container -->
+        <FrameLayout
+            android:id="@+id/card_expiry_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/card_expiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exp: 12/25"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/card_expiry_masked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exp: **/**"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- CVV Container -->
+        <FrameLayout
+            android:id="@+id/card_cvv_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/card_expiry_container">
+
+            <TextView
+                android:id="@+id/card_cvv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CVV: 123"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/card_cvv_masked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CVV: ***"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/card_type_icon"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:srcCompat="@drawable/ic_visa" />
+
+        <ImageButton
+            android:id="@+id/btn_toggle_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Toggle card details"
+            android:src="@drawable/ic_visibility"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
