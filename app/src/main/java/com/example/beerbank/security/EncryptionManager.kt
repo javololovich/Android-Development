@@ -106,10 +106,5 @@ class EncryptionManager(private val context: Context) {
         return String(decryptedBytes)
     }
 
-    // FOR DEBUGGING ONLY - REMOVE BEFORE PRODUCTION
-    fun getEncryptionKeyForDebug(): String {
-        val password = getDatabasePassword()
-        android.util.Log.d("EncryptionDebug", "Database Key: $password")
-        return password
-    }
+
 }
