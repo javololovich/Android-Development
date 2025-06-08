@@ -9,5 +9,5 @@
 <img width="1371" alt="Pasted Graphic" src="https://github.com/user-attachments/assets/81eabe5b-b926-4f84-8581-d55e4adfbf74" />
 ![hide:umhide](https://github.com/user-attachments/assets/b30c15b9-793c-44da-8ade-6e4c07db2b87)
 <img width="380" alt="gmail-verif" src="https://github.com/user-attachments/assets/a6498172-a0c7-440a-9900-25704af150a1" />
-<img width="536" alt="Database Key CRkVPadn4ZhguRnQQ6rLafxGruscph2gCAgVJoX8yI=" src="https://github.com/user-attachments/assets/cda9f4ee-3e65-4e0d-8db1-2faf566aff1a" />
+
 ![confirm_email](https://github.com/user-attachments/assets/f4063746-d204-4380-9dfc-cdf83d45f88b)
